@@ -1,0 +1,223 @@
+/* Reset y básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background: #FBF3E3;
+  color: #553518;
+}
+
+/* Encabezado */
+header {
+  background: #553518;
+  color: #FBF3E3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #C29925;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header ul li a {
+  color: #FBF3E3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header ul li a:hover {
+  color: #C29925;
+}
+
+header .socials {
+  display: flex;
+  gap: 1rem;
+}
+
+header .socials a i {
+  font-size: 1.5rem;
+  color: #C29925;
+  transition: 0.3s;
+}
+
+header .socials a i:hover {
+  color: #FBF3E3;
+}
+
+/* Hero */
+.hero {
+  background: url('imagen1.png') no-repeat center/cover;
+  color: #FBF3E3;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #C29925;
+  color: #553518;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #847C74;
+  color: #FBF3E3;
+  transform: scale(1.05);
+}
+
+/* Menú y pedido a domicilio */
+.menu, .delivery {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.menu { background: #A79B8F; }
+.delivery { background: #C29925; color: #FBF3E3; }
+
+.menu h2, .delivery h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.menu-items, .delivery-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #FBF3E3;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  background: #847474;
+  color: #FBF3E3;
+}
+
+.delivery .btn {
+  margin-top: 0.5rem;
+  background: #553518;
+  color: #FBF3E3;
+}
+
+.delivery .btn:hover {
+  background: #847C74;
+  transform: scale(1.1);
+}
+
+/* Carrusel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 12px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+  min-width: 100%;
+  border-radius: 12px;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(85, 53, 24, 0.7);
+  border: none;
+  color: #FBF3E3;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.carousel button:hover {
+  background: rgba(199, 153, 37, 0.8);
+}
+
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
+/* Sobre Nosotros, Reservas, Contacto y Footer */
+.about, .reservas, .contact {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.about { background: #FBF3E3; color: #553518; }
+.about h2 { color: #C29925; }
+
+.reservas { background: #A79B8F; color: #FBF3E3; }
+
+.contact { background: #847C74; color: #FBF3E3; }
+.contact h2 { color: #C29925; }
+
+footer {
+  background: #553518;
+  color: #FBF3E3;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  header { flex-direction: column; gap: 1rem; }
+  header ul { flex-direction: column; gap: 0.5rem; }
+  header .socials { justify-content: center; }
+}
